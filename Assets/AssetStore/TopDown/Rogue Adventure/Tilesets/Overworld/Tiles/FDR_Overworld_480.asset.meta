@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b52b7188d4c14cf49a7e1d840bd93df9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238463
+  packageName: 2D TopDown Tilesets Bundle Rogue Adventure World
+  packageVersion: 3.2.0
+  assetPath: Assets/ElvGames/Rogue Adventure/Tilesets/Overworld/Tiles/FDR_Overworld_480.asset
+  uploadId: 761555

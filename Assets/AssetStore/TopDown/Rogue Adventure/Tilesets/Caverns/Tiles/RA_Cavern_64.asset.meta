@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 290b3376d8425db41bfa57521c38a274
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238463
+  packageName: 2D TopDown Tilesets Bundle Rogue Adventure World
+  packageVersion: 3.2.0
+  assetPath: Assets/ElvGames/Rogue Adventure/Tilesets/Caverns/Tiles/RA_Cavern_64.asset
+  uploadId: 761555
