@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Scaner_Tower scaner_Tower;
+    public Transform firePoint;
+    public GameObject center;
+    Animator animator;
+
+    void Awake()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void FireTrigger()
     {
-        
-    }
+        animator.SetTrigger("Fire");
+    } 
+
 }

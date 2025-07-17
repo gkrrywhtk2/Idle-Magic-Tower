@@ -1,0 +1,394 @@
+fileFormatVersion: 2
+guid: 0a931a486d8a24533a40e17757d59ddd
+AssetOrigin:
+  serializedVersion: 1
+  productId: 264294
+  packageName: Ultimate Explosions and Magic Collection
+  packageVersion: 1.0
+  assetPath: Assets/Ultimate Explosions and Magic Collection/Artwork/Explosions Pack
+    9/VaperSheet/vapor-sheet.png
+  uploadId: 666244
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8418072059662504625
+    second: vapor-sheet_0
+  - first:
+      213: -433647829841368535
+    second: vapor-sheet_1
+  - first:
+      213: 5345062245903004043
+    second: vapor-sheet_2
+  - first:
+      213: 4549180945828330115
+    second: vapor-sheet_3
+  - first:
+      213: 855694925048269963
+    second: vapor-sheet_4
+  - first:
+      213: 1805571975770556367
+    second: vapor-sheet_5
+  - first:
+      213: 7741941170553016961
+    second: vapor-sheet_6
+  - first:
+      213: -9160304004257104389
+    second: vapor-sheet_7
+  - first:
+      213: 5970590682552002558
+    second: vapor-sheet_8
+  - first:
+      213: 4251507892358951634
+    second: vapor-sheet_9
+  - first:
+      213: 6962934507029640471
+    second: vapor-sheet_10
+  - first:
+      213: -8528573209624642594
+    second: vapor-sheet_11
+  - first:
+      213: -3901940617288515329
+    second: vapor-sheet_12
+  - first:
+      213: -768392387566372589
+    second: vapor-sheet_13
+  - first:
+      213: -8869606051564588443
+    second: vapor-sheet_14
+  - first:
+      213: -2416786796580355475
+    second: vapor-sheet_15
+  - first:
+      213: -2437835960752823446
+    second: vapor-sheet_16
+  - first:
+      213: -1705703994755514953
+    second: vapor-sheet_17
+  - first:
+      213: -1744569126769093911
+    second: vapor-sheet_18
+  - first:
+      213: -5878386607911826675
+    second: vapor-sheet_19
+  - first:
+      213: -4755365937900162426
+    second: vapor-sheet_20
+  - first:
+      213: 4449731397236103971
+    second: vapor-sheet_21
+  - first:
+      213: 7392893744111042908
+    second: vapor-sheet_22
+  - first:
+      213: -5990315359683335235
+    second: vapor-sheet_23
+  - first:
+      213: -8461605529997891688
+    second: vapor-sheet_24
+  - first:
+      213: 8795027424818055482
+    second: vapor-sheet_25
+  - first:
+      213: -3018680956677644531
+    second: vapor-sheet_26
+  - first:
+      213: 7612220542774409234
+    second: vapor-sheet_27
+  - first:
+      213: -9142524695570508154
+    second: vapor-sheet_28
+  - first:
+      213: -2639657678444006364
+    second: vapor-sheet_29
+  - first:
+      213: 7319492349450179497
+    second: vapor-sheet_30
+  - first:
+      213: -1708473599702898422
+    second: vapor-sheet_31
+  - first:
+      213: 2688867278056618560
+    second: vapor-sheet_32
+  - first:
+      213: 6359576944702759192
+    second: vapor-sheet_33
+  - first:
+      213: -385890561459820013
+    second: vapor-sheet_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vapor-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 314
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b213d9ffeff2d470800000000000000
+      internalID: 8418072059662504625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vapor-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 0
+        width: 314
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92aafa8a89f5bf9f0800000000000000
+      internalID: -433647829841368535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vapor-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 0
+        width: 314
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8176651bc97d2a40800000000000000
+      internalID: 5345062245903004043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vapor-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 0
+        width: 314
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38ab217b7ffe12f30800000000000000
+      internalID: 4549180945828330115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vapor-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 0
+        width: 314
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8c4b9b200a00eb00800000000000000
+      internalID: 855694925048269963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vapor-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 0
+        width: 314
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc74438452eae0910800000000000000
+      internalID: 1805571975770556367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 127527171a87b4c028c6413b82b8a6a9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      vapor-sheet_0: 8418072059662504625
+      vapor-sheet_1: -433647829841368535
+      vapor-sheet_2: 5345062245903004043
+      vapor-sheet_3: 4549180945828330115
+      vapor-sheet_4: 855694925048269963
+      vapor-sheet_5: 1805571975770556367
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

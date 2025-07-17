@@ -4,10 +4,12 @@ public class BaseBullet : MonoBehaviour, IBullet
 {
     public float speed = 10f;
     private Rigidbody2D rb;
+    private Animator animator;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>(); 
     }
 
     public void Fire(Vector3 targetPosition)
@@ -22,5 +24,18 @@ public class BaseBullet : MonoBehaviour, IBullet
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
         Debug.Log("탄환이 몬스터를 향해 발사됨!");
+    }
+
+    void OnEnable()
+    {
+        // 재화성화 시 애니메이션을 처음부터 재생
+        animator.Play("BulletIdle", 0, 0f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Enemy")) return; //Enemy Tag가 아니라면 리턴
+
+        this.gameObject.SetActive(false);
     }
 }
