@@ -9,7 +9,16 @@ public class BaseBullet : MonoBehaviour, IBullet
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>(); 
+        animator = GetComponent<Animator>();
+    }
+
+    private void OnEnable()
+    {
+        // 재화성화 시 애니메이션을 처음부터 재생
+        animator.Play("BulletIdle", 0, 0f);
+
+        //3초후 비활성화(맵 밖으로 나간 경우)
+        Invoke("Disable", 3f);
     }
 
     public void Fire(Vector3 targetPosition)
@@ -26,16 +35,18 @@ public class BaseBullet : MonoBehaviour, IBullet
         Debug.Log("탄환이 몬스터를 향해 발사됨!");
     }
 
-    void OnEnable()
-    {
-        // 재화성화 시 애니메이션을 처음부터 재생
-        animator.Play("BulletIdle", 0, 0f);
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Enemy")) return; //Enemy Tag가 아니라면 리턴
 
+        Enemy enemy = collision.GetComponent<Enemy>();
+        enemy.CallHitStop();//피격 판정
         this.gameObject.SetActive(false);
+    }
+    
+
+    void Disable()
+    {
+        gameObject.SetActive(false);
     }
 }

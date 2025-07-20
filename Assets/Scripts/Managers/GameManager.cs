@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instance = this;
+        Application.targetFrameRate = 60;//60프레임 고정
     }
 
     // Update is called once per frame
