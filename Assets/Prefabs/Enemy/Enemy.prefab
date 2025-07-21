@@ -178,6 +178,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
+  attackRange: 0.5
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!95 &1322554537821299849
 Animator:
   serializedVersion: 7
