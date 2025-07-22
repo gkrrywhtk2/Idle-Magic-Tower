@@ -8,19 +8,32 @@ public class Enemy : MonoBehaviour
     SpriteRenderer sprite;
     private Color originalColor;
     public Color hitColor;//레드(엔진에서 관리)
+    private EnemyAI enemyAI;
+    public Transform center;
 
     private int testHp;
     void Awake()
     {
+        enemyAI = GetComponent<EnemyAI>();
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         originalColor = sprite.color;
-        Init();
     }
 
     void Init()
     {
         testHp = 10;
+        InitCenterToRigid();
+    }
+    private void InitCenterToRigid()
+    {
+        BoxCollider2D col = GetComponent<BoxCollider2D>();
+            // 콜라이더의 월드 중심을 가져와서
+            Vector2 centerPos = col.bounds.center;
+            // center Transform의 position에 설정
+            center.position = centerPos;
+          // Debug.LogWarning("Collider2D 또는 center Transform이 할당되지 않았습니다.", this);
+    
     }
     void OnEnable()
     {
@@ -35,14 +48,11 @@ public class Enemy : MonoBehaviour
     {
 
         if (nowHit) yield break; // 중복 실행 방지
+        
         nowHit = true;
 
         DemageCheck();
-        Vector3 towerPos = GameManager.instance.tower.center.transform.position;
-        Vector3 dirvec = transform.position - towerPos;
-
-        rigid.linearVelocity = Vector2.zero; // 속도 초기화
-        rigid.AddForce(dirvec.normalized * 0.1f, ForceMode2D.Impulse);
+    
         sprite.color = hitColor;
         float hitTime = 0.1f;
 
@@ -62,8 +72,4 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
 }
