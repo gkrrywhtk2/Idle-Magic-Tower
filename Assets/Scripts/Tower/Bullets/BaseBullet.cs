@@ -39,7 +39,7 @@ public class BaseBullet : MonoBehaviour, IBullet
     {
         if (!collision.CompareTag("Enemy")) return; //Enemy Tag가 아니라면 리턴
 
-        Enemy enemy = collision.GetComponent<Enemy>();
+        EnemyAI enemy = collision.GetComponent<EnemyAI>();
         enemy.CallHitStop();//피격 판정
         this.gameObject.SetActive(false);
     }
