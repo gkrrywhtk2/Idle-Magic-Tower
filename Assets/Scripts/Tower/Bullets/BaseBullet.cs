@@ -15,10 +15,10 @@ public class BaseBullet : MonoBehaviour, IBullet
     private void OnEnable()
     {
         // 재화성화 시 애니메이션을 처음부터 재생
-        animator.Play("BulletIdle", 0, 0f);
+        //animator.Play("BulletIdle", 0, 0f);
 
         //3초후 비활성화(맵 밖으로 나간 경우)
-        Invoke("Disable", 3f);
+        //Invoke("Disable", 3f);
     }
 
     public void Fire(Vector3 targetPosition)
@@ -37,16 +37,21 @@ public class BaseBullet : MonoBehaviour, IBullet
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Enemy")) return; //Enemy Tag가 아니라면 리턴
-
+        Debug.Log("충돌 감지: " + collision.gameObject.name);
+        if (!collision.CompareTag("Enemy"))
+            return; //Enemy Tag가 아니라면 리턴
+        //Debug.Log("충돌 감지: " + collision.gameObject.name);
         EnemyAI enemy = collision.GetComponent<EnemyAI>();
         enemy.CallHitStop();//피격 판정
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
+        Debug.Log("탄환이 사라졌습니다, 사유 : 충돌");
     }
-    
+
+
 
     void Disable()
     {
         gameObject.SetActive(false);
+        Debug.Log("탄환이 사라졌습니다, 사유 : 시간 종료");
     }
 }
