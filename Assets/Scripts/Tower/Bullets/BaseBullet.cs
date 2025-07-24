@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BaseBullet : MonoBehaviour, IBullet
+public class BaseBullet : MonoBehaviour, IBulletStrategy
 {
     public float speed = 10f;
     private Rigidbody2D rb;
@@ -34,17 +34,23 @@ public class BaseBullet : MonoBehaviour, IBullet
 
         Debug.Log("탄환이 몬스터를 향해 발사됨!");
     }
+    public void Effect()
+    {
+        GameObject effect = PoolingManager.instance.bulletEffectPooling.Get(0);
+        effect.transform.position = transform.position; //이펙트의 위치는 총알이 Effect()를 호출한 순간
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("충돌 감지: " + collision.gameObject.name);
+        //Debug.Log("충돌 감지: " + collision.gameObject.name);
         if (!collision.CompareTag("Enemy"))
             return; //Enemy Tag가 아니라면 리턴
         //Debug.Log("충돌 감지: " + collision.gameObject.name);
         EnemyAI enemy = collision.GetComponent<EnemyAI>();
         enemy.CallHitStop();//피격 판정
+        Effect();//충돌 이펙트
         gameObject.SetActive(false);
-        Debug.Log("탄환이 사라졌습니다, 사유 : 충돌");
+       // Debug.Log("탄환이 사라졌습니다, 사유 : 충돌");
     }
 
 

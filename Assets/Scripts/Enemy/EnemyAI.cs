@@ -7,6 +7,8 @@ public class EnemyAI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     Rigidbody2D towerRigid;//타워 리지드바디
     Rigidbody2D rigid;
+    BoxCollider2D col;
+
     public float speed;//적의 이동속도
     Animator anim;
     public bool nowHit = false;//Hit코루틴 중복실행 방지
@@ -33,6 +35,7 @@ public class EnemyAI : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        col = GetComponent<BoxCollider2D>();
         originalColor = sprite.color;
     }
     void Init()
@@ -146,6 +149,7 @@ public class EnemyAI : MonoBehaviour
         testHp--;
         if (testHp <= 0)
         {
+            col.enabled = false;
             anim.SetBool("Dead", true);
         }
     }
@@ -184,6 +188,7 @@ public class EnemyAI : MonoBehaviour
         canAttack = false;
         nowHit = false;
         anim.SetBool("Dead", false);
+        col.enabled = true;
         }
     
 }

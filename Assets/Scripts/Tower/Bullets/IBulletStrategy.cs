@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface IBullet
+public interface IBulletStrategy
 {
     void Fire(Vector3 direction);
 }
