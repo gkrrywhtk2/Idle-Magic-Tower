@@ -2,27 +2,31 @@ using UnityEngine;
 
 public class TowerData_Server : MonoBehaviour
 {
-    [Header("성장-강화 레벨")]
-    public int attackLevel;
-    public int rangeLevel;
-    public int critChanceLevel;
-    public int critDamageLevel;
-    public int maxHpLevel;
-    public int regenLevel;
+    public enum StatType
+    {
+        Attack,
+        Range,
+        CritChance,
+        CritDamage,
+        MaxHp,
+        Regen,
+        Count // 항상 마지막에 위치 (배열 길이용)
+    }
+
+    public int[] statLevels = new int[(int)StatType.Count];
 
     void Start()
     {
-        Test_AllLevel1();
+        AllLevel0();
+    }
+    
+    private void AllLevel0()
+    {
+        for (int i = 0; i < statLevels.Length; i++)
+        {
+            statLevels[i] = 0;
+        }
     }
 
-  private void Test_AllLevel1()
-    {
-        //테스트용 일단 모두 레벨 1로
-        attackLevel = 0;
-        rangeLevel = 0;
-        critChanceLevel = 0;
-        critDamageLevel = 0;
-        maxHpLevel = 0;
-        regenLevel = 0;
-    }
+
 }
