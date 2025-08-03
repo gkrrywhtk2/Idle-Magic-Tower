@@ -7,6 +7,7 @@ public class PoolingManager : MonoBehaviour
     [Header("#Connect")]
     public BulletPooling bulletPooling;
     public BulletEffectPooling bulletEffectPooling;
+    public UIEffectPooling uIEffectPooling;
 
     void Start()
     {
