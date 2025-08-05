@@ -8,6 +8,7 @@ public class PoolingManager : MonoBehaviour
     public BulletPooling bulletPooling;
     public BulletEffectPooling bulletEffectPooling;
     public UIEffectPooling uIEffectPooling;
+    public DamageEffectPolling damageEffectPolling;
 
     void Start()
     {

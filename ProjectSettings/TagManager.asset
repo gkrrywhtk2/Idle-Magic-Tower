@@ -49,5 +49,8 @@ TagManager:
   - name: Tower
     uniqueID: 4129764207
     locked: 0
+  - name: UI
+    uniqueID: 379946729
+    locked: 0
   m_RenderingLayers:
   - Default

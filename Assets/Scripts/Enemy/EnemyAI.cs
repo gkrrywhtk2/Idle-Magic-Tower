@@ -30,6 +30,9 @@ public class EnemyAI : MonoBehaviour
     [Header("Data")]//변수들 모음
     private int testHp;
 
+    [Header("Point")]//지점 모음
+    public Transform damagePoint;//데미지가 출력되는 위치
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();

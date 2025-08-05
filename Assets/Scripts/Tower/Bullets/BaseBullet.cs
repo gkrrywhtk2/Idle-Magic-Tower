@@ -34,10 +34,14 @@ public class BaseBullet : MonoBehaviour, IBulletStrategy
 
         Debug.Log("탄환이 몬스터를 향해 발사됨!");
     }
-    public void Effect()
+    public void Effect(Collider2D collision)
     {
+        EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
         GameObject effect = PoolingManager.instance.bulletEffectPooling.Get(0);
         effect.transform.position = transform.position; //이펙트의 위치는 총알이 Effect()를 호출한 순간
+        DamageText effectText = PoolingManager.instance.damageEffectPolling.Get(0).GetComponent<DamageText>();
+        effectText.transform.position = enemy.damagePoint.position;
+        effectText.Init(999);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,7 +52,7 @@ public class BaseBullet : MonoBehaviour, IBulletStrategy
         //Debug.Log("충돌 감지: " + collision.gameObject.name);
         EnemyAI enemy = collision.GetComponent<EnemyAI>();
         enemy.CallHitStop();//피격 판정
-        Effect();//충돌 이펙트
+        Effect(collision);//충돌 이펙트
         gameObject.SetActive(false);
        // Debug.Log("탄환이 사라졌습니다, 사유 : 충돌");
     }

@@ -2847,7 +2847,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000006f3327f69d77ac29
+  m_ApplyToSortingLayers: 000000006f3327f69d77ac29e986a516
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -4045,6 +4045,7 @@ Transform:
   m_Children:
   - {fileID: 1061449709}
   - {fileID: 1221426825}
+  - {fileID: 1818163755}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1095141579
@@ -5530,6 +5531,7 @@ MonoBehaviour:
   bulletPooling: {fileID: 1061449710}
   bulletEffectPooling: {fileID: 1221426826}
   uIEffectPooling: {fileID: 1188485568}
+  damageEffectPolling: {fileID: 1818163756}
 --- !u!1 &1580393189
 GameObject:
   m_ObjectHideFlags: 0
@@ -17294,6 +17296,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810645825}
   m_CullTransparentMesh: 1
+--- !u!1 &1818163754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1818163755}
+  - component: {fileID: 1818163756}
+  m_Layer: 0
+  m_Name: DemageEffectPolling
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1818163755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818163754}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1080191357}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1818163756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818163754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532cecef3e22e42b3a0fab6601f36dfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 2111273400232161068, guid: 22ebb8f0fb5024e30b8334b5b2bf0999, type: 3}
 --- !u!1 &1828963064
 GameObject:
   m_ObjectHideFlags: 0
