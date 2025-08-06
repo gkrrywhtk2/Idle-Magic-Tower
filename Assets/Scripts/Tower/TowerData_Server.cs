@@ -17,7 +17,7 @@ public class TowerData_Server : MonoBehaviour
 
     void Start()
     {
-        AllLevel0();
+       // AllLevel0();
     }
     
     private void AllLevel0()

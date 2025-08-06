@@ -5,6 +5,7 @@ public class BaseBullet : MonoBehaviour, IBulletStrategy
     public float speed = 10f;
     private Rigidbody2D rb;
     private Animator animator;
+    private int baseDamage = 10;
 
     void Awake()
     {
@@ -41,7 +42,8 @@ public class BaseBullet : MonoBehaviour, IBulletStrategy
         effect.transform.position = transform.position; //이펙트의 위치는 총알이 Effect()를 호출한 순간
         DamageText effectText = PoolingManager.instance.damageEffectPolling.Get(0).GetComponent<DamageText>();
         effectText.transform.position = enemy.damagePoint.position;
-        effectText.Init(999);
+        int damage = GameManager.instance.tower.DamageCalculator(baseDamage);
+        effectText.Init(damage);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

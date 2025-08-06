@@ -20,25 +20,25 @@ public class UpgradeCard : MonoBehaviour
 
     public void Update_GoldCostText()
     {
-        var data = GameManager.instance.towerData_Server;
+        var data = GameManager.instance.towerData;
         costText.text = GetGoldCost(id, data.statLevels[id]).ToString();
     }
     private void Update_StatText()
     {
-        var data = GameManager.instance.towerData_Server;
+        var data = GameManager.instance.towerData;
         descText.text = GetStatPoint(id, data.statLevels[id]).ToString() +
             " -> " + GetStatPoint(id, data.statLevels[id] + 1).ToString();
     }
     private void Update_Lvtext()
     {
-        var data = GameManager.instance.towerData_Server;
+        var data = GameManager.instance.towerData;
         lvText.text = "Lv." + data.statLevels[id];
     }
 
     public void LevelUpStat()
     {
         //스탯 레벨업 함수
-        var data = GameManager.instance.towerData_Server;
+        var data = GameManager.instance.towerData;
         var pool = PoolingManager.instance.uIEffectPooling;
         data.statLevels[id]++;
 

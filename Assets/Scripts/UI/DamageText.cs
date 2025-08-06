@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using GameSystem.DamageFormat;
 
 public class DamageText : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class DamageText : MonoBehaviour
 
     public void Init(int damage)
     {
-        damageText.text = damage.ToString();
+        damageText.text = UnitFormatter.FormatWithUnit(damage);
     }
 
 }

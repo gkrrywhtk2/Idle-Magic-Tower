@@ -46,5 +46,13 @@ public class Tower : MonoBehaviour
         slider_Hp.value = now / max;
         towerHp_Text.text = $"{(int)now}/{(int)max}";
     }
+    public int DamageCalculator(int baseDamage)
+    {
+        int baseATK = towerData.statLevels[0];
+        float randomFactor = UnityEngine.Random.Range(0.9f, 1.1f); // 0.9 ~ 1.1 사이 랜덤
+        int damage = Mathf.RoundToInt(baseDamage * baseATK * randomFactor);
+        return damage;
+    }
+
 
 }

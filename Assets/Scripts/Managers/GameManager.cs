@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [Header("#Connect_GameObject")]
     public Tower tower; //타워 오브젝트 메인
     public TowerData_Server towerData_Server;
+    public TowerData towerData;
 
     void Start()
     {
