@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using GameSystem.DamageFormat;
 
 public class UpgradeCard : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class UpgradeCard : MonoBehaviour
     public void Update_GoldCostText()
     {
         var data = GameManager.instance.towerData;
-        costText.text = GetGoldCost(id, data.statLevels[id]).ToString();
+        costText.text = UnitFormatter.FormatWithUnit(GetGoldCost(id, data.statLevels[id]));
     }
     private void Update_StatText()
     {
@@ -37,12 +38,22 @@ public class UpgradeCard : MonoBehaviour
 
     public void LevelUpStat()
     {
-        //스탯 레벨업 함수
+        //스탯을 레벨업 해주는 메서드
+
         var data = GameManager.instance.towerData;
         var pool = PoolingManager.instance.uIEffectPooling;
-        data.statLevels[id]++;
 
-        RectTransform effect = pool.Get(0).GetComponent<RectTransform>();
+        //만약 보유 골드가 부족하면 오류 메세지 띄우자
+        int requireGold = GetGoldCost(id, data.statLevels[id]);
+        if (data.gold < requireGold)
+        {
+            UiManager.instance.ShowWarning("골드가 부족합니다!");
+            return;
+        }
+        data.SpendGold(GetGoldCost(id, data.statLevels[id]));//골드 차감
+        data.statLevels[id]++;//스탯 성장
+
+        RectTransform effect = pool.Get(0).GetComponent<RectTransform>();//업그레이드 이펙트
         // 2️⃣ 이펙트도 월드 좌표로 변경
         effect.position = upgradeEffectPoint.position;
 

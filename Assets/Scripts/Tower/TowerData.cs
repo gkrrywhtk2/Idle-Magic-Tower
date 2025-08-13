@@ -1,5 +1,5 @@
-using System.Diagnostics.Tracing;
 using UnityEngine;
+using System;
 
 public class TowerData : MonoBehaviour
 {
@@ -7,6 +7,8 @@ public class TowerData : MonoBehaviour
     public float nowHp;
     public int gold;
     public int dia;
+    // 골드가 변할 때 발생하는 이벤트
+    public event Action<int> OnGoldChanged;
 
     public int[] statLevels;
 
@@ -21,6 +23,34 @@ public class TowerData : MonoBehaviour
         gold = serverData.gold;
         dia = serverData.dia;
 
+    }
+
+    //골드 관련 메서드
+     public int Gold
+    {
+        get => gold;
+        set
+        {
+            if (gold != value)
+            {
+                gold = value;
+                OnGoldChanged?.Invoke(gold);
+            }
+        }
+    }
+
+    // 골드 추가
+    public void AddGold(int amount)
+    {
+        Gold += amount;
+    }
+
+    // 골드 차감
+    public bool SpendGold(int amount)
+    {
+        if (gold < amount) return false;
+        Gold -= amount;
+        return true;
     }
     
 

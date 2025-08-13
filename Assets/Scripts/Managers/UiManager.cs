@@ -6,6 +6,7 @@ public class UiManager : MonoBehaviour
 
     [Header("#Connect_GameObject")]
     public GameObject UpgradeBoard;
+    public WarningMessage warningMessage;
 
     void Start()
     {
@@ -21,5 +22,11 @@ public class UiManager : MonoBehaviour
                 break;
 
         }
+    }
+    public void ShowWarning(string message)
+    {
+        //message를 경고창에 띄우는 메서드
+        warningMessage.gameObject.SetActive(true);
+        warningMessage.warningMessage.text = message;
     }
 }
