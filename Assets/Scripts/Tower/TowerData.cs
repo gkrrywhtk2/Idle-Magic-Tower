@@ -1,9 +1,12 @@
+using System.Diagnostics.Tracing;
 using UnityEngine;
 
 public class TowerData : MonoBehaviour
 {
     public float maxHp;
     public float nowHp;
+    public int gold;
+    public int dia;
 
     public int[] statLevels;
 
@@ -15,6 +18,9 @@ public class TowerData : MonoBehaviour
         {
             statLevels[i] = serverData.statLevels[i];
         }
+        gold = serverData.gold;
+        dia = serverData.dia;
+
     }
     
 

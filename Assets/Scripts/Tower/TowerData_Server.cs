@@ -12,6 +12,9 @@ public class TowerData_Server : MonoBehaviour
         Regen,
         Count // 항상 마지막에 위치 (배열 길이용)
     }
+    public int gold;//골드 재화량
+    public int dia;//다이아 재화량
+
 
     public int[] statLevels = new int[(int)StatType.Count];
 
