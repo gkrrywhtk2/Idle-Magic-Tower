@@ -57,6 +57,7 @@ public class UpgradeCard : MonoBehaviour
         // 2️⃣ 이펙트도 월드 좌표로 변경
         effect.position = upgradeEffectPoint.position;
 
+        RangeUpdate();//범위 갱신
         CardUpdate();//UI 갱신
     }
 
@@ -68,6 +69,9 @@ public class UpgradeCard : MonoBehaviour
         {
             case 0://공격력
                 cost = (nowLv + 1) * 2;
+                break;
+            case 1://공격 범위
+                cost = (nowLv + 1) * 4;
                 break;
             default:
                 cost = nowLv + 2;
@@ -84,11 +88,23 @@ public class UpgradeCard : MonoBehaviour
             case 0:
                 statPoint = nowLv * 2;
                 break;
+            case 1://Range
+                statPoint = nowLv * 0.01f;
+                break;
             default:
                 statPoint = nowLv * 2;
                 break;
         }
         return statPoint;
+    }
+
+    private void RangeUpdate()
+    {
+        //공격 범위 현재 스탯에 맞게 업그레이드
+        var data = GameManager.instance.towerData;
+        int baseRange = 1;
+        float newRange = (data.statLevels[1] * 0.01f) + baseRange;
+        GameManager.instance.tower.scaner_Tower.UpgradeRange(newRange);
     }
 
     public void OnPointerDown()
