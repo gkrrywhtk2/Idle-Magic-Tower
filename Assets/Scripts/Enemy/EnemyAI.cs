@@ -28,7 +28,8 @@ public class EnemyAI : MonoBehaviour
     private Coroutine attackLoop;
 
     [Header("Data")]//변수들 모음
-    private int testHp;
+    public float maxHp = 1000;//최대 체력
+    public float nowHp;//현재 채력
 
     [Header("Point")]//지점 모음
     public Transform damagePoint;//데미지가 출력되는 위치
@@ -43,7 +44,7 @@ public class EnemyAI : MonoBehaviour
     }
     void Init()
     {
-        testHp = 10;
+        nowHp = maxHp;
         InitCenterToRigid();
     }
 
@@ -123,9 +124,10 @@ public class EnemyAI : MonoBehaviour
 
         StartCoroutine(TowerScanLoop());
     }
-    public void CallHitStop()
+    public void CallHit(float damage)
     {
         StartCoroutine(Hit());
+        DemageCheck(damage);
     }
     IEnumerator Hit()
     {
@@ -133,8 +135,6 @@ public class EnemyAI : MonoBehaviour
         if (nowHit) yield break; // 중복 실행 방지
 
         nowHit = true;
-
-        DemageCheck();
 
         sprite.color = hitColor;
         float hitTime = 0.1f;
@@ -145,12 +145,14 @@ public class EnemyAI : MonoBehaviour
         sprite.color = originalColor;
         nowHit = false;
     }
-    void DemageCheck()
+    void DemageCheck(float damage)
     {
         if (anim.GetBool("Dead"))
             return;
-        testHp--;
-        if (testHp <= 0)
+
+        nowHp -= damage;
+
+        if (nowHp <= 0)
         {
             col.enabled = false;
             anim.SetBool("Dead", true);

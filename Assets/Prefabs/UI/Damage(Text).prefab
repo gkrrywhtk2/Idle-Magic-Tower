@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6161184219747020465, guid: fc056642923e54823b05825746f5a6e8, type: 2}
+  - {fileID: 3217678784121856464, guid: ceaf396d116874c2e8677048293e8fb8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,15 +107,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 123
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fc056642923e54823b05825746f5a6e8, type: 2}
-  m_sharedMaterial: {fileID: -6161184219747020465, guid: fc056642923e54823b05825746f5a6e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ceaf396d116874c2e8677048293e8fb8, type: 2}
+  m_sharedMaterial: {fileID: 3217678784121856464, guid: ceaf396d116874c2e8677048293e8fb8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 118740
-  m_fontColor: {r: 1, g: 0.89918447, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -132,8 +132,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.5
-  m_fontSizeBase: 2.5
+  m_fontSize: 2
+  m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -226,3 +226,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageText: {fileID: 6644782327266367683}
+  normalColor: {r: 1, g: 0.75357646, b: 0, a: 1}
+  criColor: {r: 1, g: 0.29612744, b: 0, a: 1}

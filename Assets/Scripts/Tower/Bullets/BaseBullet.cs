@@ -33,17 +33,29 @@ public class BaseBullet : MonoBehaviour, IBulletStrategy
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        Debug.Log("탄환이 몬스터를 향해 발사됨!");
+       // Debug.Log("탄환이 몬스터를 향해 발사됨!");
     }
     public void Effect(Collider2D collision)
     {
         EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
         GameObject effect = PoolingManager.instance.bulletEffectPooling.Get(0);
         effect.transform.position = transform.position; //이펙트의 위치는 총알이 Effect()를 호출한 순간
+        // DamageText effectText = PoolingManager.instance.damageEffectPolling.Get(0).GetComponent<DamageText>();
+        // effectText.transform.position = enemy.damagePoint.position;
+        // int damage = GameManager.instance.tower.DamageCalculator(baseDamage);
+        // effectText.Init(damage);
+    }
+    public void ApplyDamage(Collider2D collision)
+    {
+        EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
         DamageText effectText = PoolingManager.instance.damageEffectPolling.Get(0).GetComponent<DamageText>();
         effectText.transform.position = enemy.damagePoint.position;
-        int damage = GameManager.instance.tower.DamageCalculator(baseDamage);
-        effectText.Init(damage);
+        bool cri; //크리티컬 성공 유무
+        float damage = GameManager.instance.tower.DamageCalculator(baseDamage, out cri);
+        effectText.Init(damage, cri);
+
+
+        enemy.CallHit(damage);//몬스터에게 접근@@ 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,10 +65,10 @@ public class BaseBullet : MonoBehaviour, IBulletStrategy
             return; //Enemy Tag가 아니라면 리턴
         //Debug.Log("충돌 감지: " + collision.gameObject.name);
         EnemyAI enemy = collision.GetComponent<EnemyAI>();
-        enemy.CallHitStop();//피격 판정
         Effect(collision);//충돌 이펙트
+        ApplyDamage(collision);//데미지 주입
         gameObject.SetActive(false);
-       // Debug.Log("탄환이 사라졌습니다, 사유 : 충돌");
+        // Debug.Log("탄환이 사라졌습니다, 사유 : 충돌");
     }
 
 
