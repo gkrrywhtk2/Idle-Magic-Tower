@@ -3,15 +3,12 @@ using System;
 
 public class TowerData : MonoBehaviour
 {
-    public float maxHp;
-    public float nowHp;
     public int gold;
     public int dia;
     // 골드가 변할 때 발생하는 이벤트
     public event Action<int> OnGoldChanged;
 
     public int[] statLevels;
-
 
     // 서버 데이터 복사 메서드
     public void CopyFromServer(TowerData_Server serverData)
@@ -26,7 +23,7 @@ public class TowerData : MonoBehaviour
     }
 
     //골드 관련 메서드
-     public int Gold
+    public int Gold
     {
         get => gold;
         set
@@ -52,6 +49,8 @@ public class TowerData : MonoBehaviour
         Gold -= amount;
         return true;
     }
+    //기본 체력 세팅
+   
     
 
 }
