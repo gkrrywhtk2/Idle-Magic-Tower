@@ -17,7 +17,7 @@ public class UpgradeCard : MonoBehaviour
     {
         Update_GoldCostText(futureAmount);
         Update_StatText(futureAmount);
-        Update_Lvtext(futureAmount);
+        Update_Lvtext();
     }
 
     public void Update_GoldCostText(int futureAmount = 0)
@@ -57,12 +57,11 @@ public class UpgradeCard : MonoBehaviour
         }
     }
 
-        private void Update_Lvtext(int futureAmount = 0)
+        private void Update_Lvtext()
     {
         var data = GameManager.instance.towerData;
         int currentLv = data.statLevels[id];
-        int futureLv = currentLv + futureAmount;
-        lvText.text = $"Lv.{currentLv} -> Lv.{futureLv}";
+        lvText.text = $"Lv.{currentLv}";
     }
 
     public void LevelUpStat()
