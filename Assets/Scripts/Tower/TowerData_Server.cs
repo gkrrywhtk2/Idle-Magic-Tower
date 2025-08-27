@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TowerData_Server : MonoBehaviour
 {
+    // ✅ 스탯
     public enum StatType
     {
         Attack,
@@ -10,26 +11,21 @@ public class TowerData_Server : MonoBehaviour
         CritDamage,
         MaxHp,
         Regen,
-        Count // 항상 마지막에 위치 (배열 길이용)
+        Count // 항상 마지막
     }
-    public int gold;//골드 재화량
-    public int dia;//다이아 재화량
-
-
     public int[] statLevels = new int[(int)StatType.Count];
 
-    void Start()
-    {
-       // AllLevel0();
-    }
-    
-    private void AllLevel0()
-    {
-        for (int i = 0; i < statLevels.Length; i++)
-        {
-            statLevels[i] = 0;
-        }
-    }
+    // ✅ 재화
+    public int gold;
+    public int dia;
 
-
+    // ✅ 스킬
+    public SkillData_Server[] skillDatas;
+}
+public class SkillData_Server
+{
+    public int id;       // 스킬 ID
+    public bool owned;   // 보유 여부
+    public int count;    // 보유 개수 (조각 등)
+    public int level;    // 스킬 레벨
 }
