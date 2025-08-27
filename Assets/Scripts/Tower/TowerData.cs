@@ -9,6 +9,8 @@ public class TowerData : MonoBehaviour
     public event Action<int> OnGoldChanged;
 
     public int[] statLevels;
+    //스킬 데이터 모음
+    public SkillData[] skillDatas;
 
     // 서버 데이터 복사 메서드
     public void CopyFromServer(TowerData_Server serverData)
