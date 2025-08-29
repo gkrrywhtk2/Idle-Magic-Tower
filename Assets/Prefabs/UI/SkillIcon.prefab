@@ -794,12 +794,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6466be7bd6b34a438830af57c4ea11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  earned: 0
-  id: 0
-  slider: {fileID: 7966096885315028484}
-  text_Name: {fileID: 4148956826572794370}
-  rankImage: {fileID: 1795349636716173648}
+  skillId: 0
+  textName: {fileID: 4148956826572794370}
   skillImage: {fileID: 1615943759672840598}
+  rankImage: {fileID: 1795349636716173648}
+  progressSlider: {fileID: 7966096885315028484}
+  progressText: {fileID: 6052549561877985371}
 --- !u!1 &7641231413159393552
 GameObject:
   m_ObjectHideFlags: 0

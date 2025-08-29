@@ -13,15 +13,14 @@ public class SkillUI : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        var data = GameManager.instance.towerData.skillDatas;
+        var data = GameManager.instance.towerData.skillDef;
 
-        // 스킬 아이콘 생성
+        // 모든 스킬 아이콘 생성
         for (int i = 0; i < data.Length; i++)
         {
             SkillIcon icon = Instantiate(skillIconPrefab, layout);
-            icon.text_Name.text = data[i].name_Kor;
-            icon.id = data[i].id;                  // 아이디 부여
-            icon.skillImage.sprite = data[i].icon; // 이미지 설정
+            icon.Init(i);
+            
         }
     }
 }

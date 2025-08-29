@@ -6790,6 +6790,7 @@ GameObject:
   - component: {fileID: 898261769}
   - component: {fileID: 898261771}
   - component: {fileID: 898261770}
+  - component: {fileID: 898261772}
   m_Layer: 0
   m_Name: DataManager
   m_TagString: Untagged
@@ -6824,9 +6825,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3168bb0af01482295b59e6c1ca9f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statLevels: 0a0000000200000003000000170000000100000002000000
-  gold: 0
-  dia: 0
+  statLevels_Record: 0a0000000a0000000a0000000a0000000a0000000a000000
+  gold_Record: 100
+  dia_Record: 100
 --- !u!114 &898261771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6842,9 +6843,28 @@ MonoBehaviour:
   gold: 0
   dia: 0
   statLevels: 000000000000000000000000000000000000000000000000
-  skillDatas:
+  skillDef:
   - {fileID: 11400000, guid: 5b4ee60426e3d4c59be1f547ef8812b3, type: 2}
   - {fileID: 11400000, guid: 78ce1cbdd3f9f4ea5aebb7b4c08e17dc, type: 2}
+--- !u!114 &898261772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898261768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87dfef62bb36402dbd8aae576e8fae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rankColors:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &907320209
 GameObject:
   m_ObjectHideFlags: 0
@@ -7182,6 +7202,7 @@ MonoBehaviour:
   tower: {fileID: 1345250922}
   towerData_Server: {fileID: 898261770}
   towerData: {fileID: 898261771}
+  rankColor: {fileID: 898261772}
 --- !u!4 &944822807
 Transform:
   m_ObjectHideFlags: 0
@@ -7673,12 +7694,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6466be7bd6b34a438830af57c4ea11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  earned: 0
-  id: 0
-  slider: {fileID: 0}
-  text_Name: {fileID: 0}
-  rankImage: {fileID: 0}
+  skillId: 0
+  textName: {fileID: 0}
   skillImage: {fileID: 0}
+  rankImage: {fileID: 0}
+  progressSlider: {fileID: 0}
+  progressText: {fileID: 0}
 --- !u!1 &991472403
 GameObject:
   m_ObjectHideFlags: 0
@@ -28415,12 +28436,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6466be7bd6b34a438830af57c4ea11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  earned: 0
-  id: 0
-  slider: {fileID: 0}
-  text_Name: {fileID: 0}
-  rankImage: {fileID: 0}
+  skillId: 0
+  textName: {fileID: 0}
   skillImage: {fileID: 0}
+  rankImage: {fileID: 0}
+  progressSlider: {fileID: 0}
+  progressText: {fileID: 0}
 --- !u!114 &8955829940622045304
 MonoBehaviour:
   m_ObjectHideFlags: 0

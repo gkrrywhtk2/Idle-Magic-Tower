@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public Tower tower; //타워 오브젝트 메인
     public TowerData_Server towerData_Server;
     public TowerData towerData;
+    public RankColor rankColor;
 
     void Start()
     {
