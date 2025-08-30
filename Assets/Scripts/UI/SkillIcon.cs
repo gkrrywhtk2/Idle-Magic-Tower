@@ -15,10 +15,16 @@ public class SkillIcon : MonoBehaviour
     public Slider progressSlider;        // 스킬 보유량 게이지
     public TMP_Text progressText;        // 슬라이더 위의 텍스트 (예: 1 / 2)
 
+    [Header("Button")]                  //스킬 버튼용 
+    public Image lockSprite;
+    public Image plusSprite;
+
+    
+
     /// <summary>
     /// 스킬 아이콘 초기화
     /// </summary>
-    public void Init(int id)
+    public void Init_SkillIcon(int id)
     {
         skillId = id;
         var skillDefs = GameManager.instance.towerData.skillDef;
@@ -36,9 +42,20 @@ public class SkillIcon : MonoBehaviour
 
         int rankIndex = (int)def.rank;
         rankImage.color = GameManager.instance.rankColor.rankColors[rankIndex];
-       
+
 
         UpdateState();
+    }
+    public void Init_SkillButton(int id)
+    {
+
+        if (id <= -1)
+            return;
+
+        skillId = id;
+        var skillDefs = GameManager.instance.towerData.skillDef;
+        var def = skillDefs[id];
+        skillImage.sprite = def.icon;
     }
 
     /// <summary>

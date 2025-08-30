@@ -7,7 +7,8 @@ public class UiManager : MonoBehaviour
     [Header("#Connect_GameObject")]
     public GameObject UpgradeBoard;
     public WarningMessage warningMessage;
-
+    public SkillUI skillUI;
+    public Board board;
     void Start()
     {
         instance = this;

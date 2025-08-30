@@ -4,6 +4,7 @@ public class SkillUI : MonoBehaviour
 {
     public SkillIcon skillIconPrefab; // 스킬 아이콘 프리팹
     public Transform layout;          // 스킬 아이콘 부모 오브젝트
+    
 
     public void Init_SkillIcon()
     {
@@ -19,8 +20,8 @@ public class SkillUI : MonoBehaviour
         for (int i = 0; i < data.Length; i++)
         {
             SkillIcon icon = Instantiate(skillIconPrefab, layout);
-            icon.Init(i);
-            
+            icon.Init_SkillIcon(i);
+
         }
     }
 }
