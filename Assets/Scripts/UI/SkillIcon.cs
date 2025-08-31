@@ -49,13 +49,30 @@ public class SkillIcon : MonoBehaviour
     public void Init_SkillButton(int id)
     {
 
-        if (id <= -1)
+        if (id == -2)
+        {
+            skillImage.gameObject.SetActive(false);
+            lockSprite.gameObject.SetActive(true);
+            plusSprite.gameObject.SetActive(false);
             return;
-
+        }
+        else if (id == -1)
+        {
+            skillImage.gameObject.SetActive(false);
+            lockSprite.gameObject.SetActive(false);
+            plusSprite.gameObject.SetActive(true);
+            return;
+        }
+        else
+        {
         skillId = id;
         var skillDefs = GameManager.instance.towerData.skillDef;
         var def = skillDefs[id];
         skillImage.sprite = def.icon;
+        skillImage.gameObject.SetActive(true);
+        lockSprite.gameObject.SetActive(false);
+        plusSprite.gameObject.SetActive(false);
+        }
     }
 
     /// <summary>
