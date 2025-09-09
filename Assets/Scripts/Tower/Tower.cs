@@ -10,7 +10,7 @@ public class Tower : MonoBehaviour
     [Header("TowerSystems")]
     public GameObject center;//타워 중앙 오브젝트
     public TowerData towerData;//체력 등 타워 데이터
-    public HpSystem hpSystem;//체력 관련 코드
+    public HpMpSystem hpSystem;//체력 관련 코드
     public Scaner_Tower scaner_Tower;
     public Transform firePoint;
 

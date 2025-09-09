@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class TowerData : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class TowerData : MonoBehaviour
     public List<PlayerSkillRecord> skill_State = new List<PlayerSkillRecord>();//런타임용
     public int[] quickSlot_State;//스킬 슬롯 배열
     public int slotLevel_State;
+
+
+
     void Start()
     {
         
