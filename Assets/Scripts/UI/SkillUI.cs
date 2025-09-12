@@ -21,7 +21,7 @@ public class SkillUI : MonoBehaviour
         {
             SkillIcon icon = Instantiate(skillIconPrefab, layout);
             icon.Init_SkillIcon(i);
-
+            
         }
     }
 }

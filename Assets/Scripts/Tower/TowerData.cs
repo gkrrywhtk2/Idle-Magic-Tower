@@ -76,7 +76,11 @@ public class TowerData : MonoBehaviour
     {
         for (int index = 0; index < 10; index++)
         {
+            //이미지 바인딩
             UiManager.instance.board.skillButton[index].GetComponent<SkillIcon>().Init_SkillButton(quickSlot_State[index]);
+
+            //로직 바인딩
+            UiManager.instance.board.skillButton[index].GetComponent<SkillButton>().nowSkillIndex = quickSlot_State[index];
         }
     }
     

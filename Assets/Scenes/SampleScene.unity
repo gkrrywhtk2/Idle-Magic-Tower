@@ -2380,6 +2380,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: buttonIndex
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: skillManager
+      value: 
+      objectReference: {fileID: 1080199304}
     - target: {fileID: 5231579227272265878, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: m_Name
       value: SkillButton (4)
@@ -5498,6 +5506,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: buttonIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: skillManager
+      value: 
+      objectReference: {fileID: 1080199304}
     - target: {fileID: 5231579227272265878, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: m_Name
       value: SkillButton (1)
@@ -7475,6 +7491,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: buttonIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: skillManager
+      value: 
+      objectReference: {fileID: 1080199304}
     - target: {fileID: 5231579227272265878, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: m_Name
       value: SkillButton (5)
@@ -7745,6 +7769,50 @@ Transform:
   - {fileID: 1818163755}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1080199302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080199303}
+  - component: {fileID: 1080199304}
+  m_Layer: 0
+  m_Name: SkillManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080199303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080199302}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1151339768}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1080199304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080199302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ab6c4000e7f4e3b8b6c9c0e4a74244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1095141579
 GameObject:
   m_ObjectHideFlags: 0
@@ -8083,6 +8151,7 @@ Transform:
   - {fileID: 1556102745}
   - {fileID: 856487395}
   - {fileID: 898261769}
+  - {fileID: 1080199303}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1159414749
@@ -8173,6 +8242,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: buttonIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: skillManager
+      value: 
+      objectReference: {fileID: 1080199304}
     - target: {fileID: 5231579227272265878, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: m_Name
       value: SkillButton (3)
@@ -10242,6 +10319,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: buttonIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: skillManager
+      value: 
+      objectReference: {fileID: 1080199304}
     - target: {fileID: 5231579227272265878, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: m_Name
       value: SkillButton (2)
@@ -12482,6 +12567,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: buttonIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: skillManager
+      value: 
+      objectReference: {fileID: 1080199304}
     - target: {fileID: 5231579227272265878, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: m_Name
       value: SkillButton (6)
@@ -12579,6 +12672,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: buttonIndex
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: skillManager
+      value: 
+      objectReference: {fileID: 1080199304}
     - target: {fileID: 5231579227272265878, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: m_Name
       value: SkillButton (7)
@@ -13409,6 +13510,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: buttonIndex
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: skillManager
+      value: 
+      objectReference: {fileID: 1080199304}
     - target: {fileID: 5231579227272265878, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: m_Name
       value: SkillButton (8)
@@ -26313,6 +26422,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: buttonIndex
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: skillManager
+      value: 
+      objectReference: {fileID: 1080199304}
     - target: {fileID: 5231579227272265878, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: m_Name
       value: SkillButton (9)
@@ -27100,6 +27217,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: skillManager
+      value: 
+      objectReference: {fileID: 1080199304}
     - target: {fileID: 5231579227272265878, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: m_Name
       value: SkillButton
