@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class TowerData : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class TowerData : MonoBehaviour
 
     public int[] statLevels;
     //스킬 데이터 모음
-    public SkillDefinition[] skillDef;//스크립터블 오브젝트들
+    //public SkillDefinition[] skillDef;//스크립터블 오브젝트들
     public List<PlayerSkillRecord> skill_State = new List<PlayerSkillRecord>();//런타임용
     public int[] quickSlot_State;//스킬 슬롯 배열
     public int slotLevel_State;
@@ -44,7 +45,7 @@ public class TowerData : MonoBehaviour
                 owned = serverSkill.owned,
                 count = serverSkill.count,
                 level = serverSkill.level,
-                def = Array.Find(skillDef, s => s.id == serverSkill.id) // 런타임 SO 매핑
+                def = Array.Find(gameManager.skillManager.scriptableSkills, s => s.id == serverSkill.id) // 런타임 SO 매핑
             };
             skill_State.Add(newRecord);
         }

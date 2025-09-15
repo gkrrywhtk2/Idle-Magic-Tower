@@ -14,7 +14,7 @@ public class SkillUI : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        var data = GameManager.instance.towerData.skillDef;
+        var data = GameManager.instance.skillManager.scriptableSkills;
 
         // 모든 스킬 아이콘 생성
         for (int i = 0; i < data.Length; i++)

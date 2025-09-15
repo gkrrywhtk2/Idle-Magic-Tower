@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public TowerData_Server towerData_Server;
     public TowerData towerData;
     public RankColor rankColor;
+    public SkillManager skillManager;
 
     void Start()
     {

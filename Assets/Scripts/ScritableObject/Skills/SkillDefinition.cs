@@ -10,14 +10,17 @@ public class SkillDefinition : ScriptableObject
     public string name_Kor;//스킬 이름
     public string content_Kor;//스킬 설명
     public Sprite icon;
-}
-public class PlayerSkillRecord
-{
-    public int id;       // 스킬 ID
-    public bool owned;   // 보유 여부
-    public int count;    // 보유 개수 (조각 등)
-    public int level;    // 스킬 레벨
-    // 클라 런타임에서만 쓰는 필드
-    [NonSerialized] public SkillDefinition def;
+    public int cost;//마나 비용
+    public float coolTime;//재사용 대기시간
+    
+
+
+    public float baseDamage;       // 기본 공격력
+    public float damagePerLevel;   // 레벨마다 추가되는 공격력  
+
+    public float SetDamage(int skillLevel)
+    {
+        return baseDamage + (damagePerLevel * (skillLevel - 1));
+    }
 }
 

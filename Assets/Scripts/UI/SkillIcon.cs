@@ -27,7 +27,7 @@ public class SkillIcon : MonoBehaviour
     public void Init_SkillIcon(int id)
     {
         skillId = id;
-        var skillDefs = GameManager.instance.towerData.skillDef;
+        var skillDefs = GameManager.instance.skillManager.scriptableSkills;
 
         // 안전하게 배열 범위 체크
         if (id < 0 || id >= skillDefs.Length)
@@ -66,7 +66,7 @@ public class SkillIcon : MonoBehaviour
         else
         {
         skillId = id;
-        var skillDefs = GameManager.instance.towerData.skillDef;
+        var skillDefs = GameManager.instance.skillManager.scriptableSkills;
         var def = skillDefs[id];
         skillImage.sprite = def.icon;
         skillImage.gameObject.SetActive(true);

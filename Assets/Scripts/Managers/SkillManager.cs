@@ -4,9 +4,10 @@ using System.Collections.Generic;
 public class SkillManager : MonoBehaviour
 {
     public Dictionary<int, ISkill> skillAbility;
+    public SkillDefinition[] scriptableSkills;
 
 
-    void Awake()
+    void Start()
     {
         InitDictionary();
     }

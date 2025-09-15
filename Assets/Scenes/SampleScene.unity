@@ -2381,6 +2381,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 1345250922}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: buttonIndex
       value: 4
       objectReference: {fileID: 0}
@@ -5507,6 +5511,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 1345250922}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: buttonIndex
       value: 1
       objectReference: {fileID: 0}
@@ -6251,9 +6259,6 @@ MonoBehaviour:
   gold: 0
   dia: 0
   statLevels: 000000000000000000000000000000000000000000000000
-  skillDef:
-  - {fileID: 11400000, guid: 5b4ee60426e3d4c59be1f547ef8812b3, type: 2}
-  - {fileID: 11400000, guid: 78ce1cbdd3f9f4ea5aebb7b4c08e17dc, type: 2}
   quickSlot_State: 
   slotLevel_State: 0
 --- !u!114 &898261772
@@ -6623,6 +6628,7 @@ MonoBehaviour:
   towerData_Server: {fileID: 898261770}
   towerData: {fileID: 898261771}
   rankColor: {fileID: 898261772}
+  skillManager: {fileID: 1080199304}
 --- !u!4 &944822807
 Transform:
   m_ObjectHideFlags: 0
@@ -7492,6 +7498,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 1345250922}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: buttonIndex
       value: 5
       objectReference: {fileID: 0}
@@ -7813,6 +7823,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ab6c4000e7f4e3b8b6c9c0e4a74244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scriptableSkills:
+  - {fileID: 11400000, guid: 5b4ee60426e3d4c59be1f547ef8812b3, type: 2}
+  - {fileID: 11400000, guid: 78ce1cbdd3f9f4ea5aebb7b4c08e17dc, type: 2}
 --- !u!1 &1095141579
 GameObject:
   m_ObjectHideFlags: 0
@@ -8242,6 +8255,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 1345250922}
     - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: buttonIndex
       value: 3
@@ -10139,7 +10156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   center: {fileID: 575756664}
   towerData: {fileID: 898261771}
-  hpSystem: {fileID: 1345250923}
+  hpmpSystem: {fileID: 1345250923}
   scaner_Tower: {fileID: 575756670}
   firePoint: {fileID: 263882038}
 --- !u!114 &1345250923
@@ -10319,6 +10336,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 1345250922}
     - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: buttonIndex
       value: 2
@@ -12568,6 +12589,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 1345250922}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: buttonIndex
       value: 6
       objectReference: {fileID: 0}
@@ -12672,6 +12697,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 1345250922}
     - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: buttonIndex
       value: 7
@@ -13510,6 +13539,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 1345250922}
     - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: buttonIndex
       value: 8
@@ -26423,6 +26456,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 1345250922}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: buttonIndex
       value: 9
       objectReference: {fileID: 0}
@@ -27217,6 +27254,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 1345250922}
     - target: {fileID: 4863189598047365805, guid: c34a07f6384f54de099389ad642d5693, type: 3}
       propertyPath: skillManager
       value: 

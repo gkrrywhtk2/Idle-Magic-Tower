@@ -94,12 +94,12 @@ public class UpgradeCard : MonoBehaviour
 
         RangeUpdate();
         CardUpdate(upgradeMode);
-        tower.hpSystem.HpAllUpdate();
+        tower.hpmpSystem.HpAllUpdate();
 
         if (id == (int)TowerData_Server.StatType.MaxHp)
         {
-            tower.hpSystem.HpUpdate();
-            tower.hpSystem.nowHp += tower.hpSystem.d * upgradeMode;
+            tower.hpmpSystem.HpUpdate();
+            tower.hpmpSystem.nowHp += tower.hpmpSystem.d * upgradeMode;
         }
     }
 

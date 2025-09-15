@@ -64,4 +64,14 @@ public class TowerData_Server : MonoBehaviour
     }
 }
 
+public class PlayerSkillRecord
+{
+    public int id;       // 스킬 ID
+    public bool owned;   // 보유 여부
+    public int count;    // 보유 개수 (조각 등)
+    public int level;    // 스킬 레벨
+    // 클라 런타임에서만 쓰는 필드
+    [NonSerialized] public SkillDefinition def;
+}
+
 

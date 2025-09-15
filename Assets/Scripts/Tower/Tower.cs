@@ -10,7 +10,7 @@ public class Tower : MonoBehaviour
     [Header("TowerSystems")]
     public GameObject center;//타워 중앙 오브젝트
     public TowerData towerData;//체력 등 타워 데이터
-    public HpMpSystem hpSystem;//체력 관련 코드
+    public HpMpSystem hpmpSystem;//체력 관련 코드
     public Scaner_Tower scaner_Tower;
     public Transform firePoint;
 
@@ -33,8 +33,8 @@ public class Tower : MonoBehaviour
     public void Hit(float damage)
     {
         //Enemy로 부터 damage를 받는다.
-        hpSystem.nowHp -= damage;
-        if (hpSystem.nowHp < 0)
+        hpmpSystem.nowHp -= damage;
+        if (hpmpSystem.nowHp < 0)
         {
             Debug.Log("게임 오버");
         }
