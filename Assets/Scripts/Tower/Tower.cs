@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 
 
 public class Tower : MonoBehaviour
@@ -13,6 +14,7 @@ public class Tower : MonoBehaviour
     public HpMpSystem hpmpSystem;//체력 관련 코드
     public Scaner_Tower scaner_Tower;
     public Transform firePoint;
+    public TowerEffects towerEffects;//타워의 이펙트(애니메이션)관리 코드
 
 
     void Awake()

@@ -14,6 +14,9 @@ public class Skill1_Heal : MonoBehaviour, ISkill
     public void Use()
     {
         Debug.Log("회복");
+        float testUp = 10;
+        tower.towerEffects.fastHeal.Play();//파티클 재생
+        tower.hpmpSystem.ModifyHp(testUp);
     }
     public bool CheckUsable()
     {

@@ -81,10 +81,11 @@ public class HpMpSystem : MonoBehaviour
 
             if (nowHp < maxHp) // 풀피가 아닐 때만 회복
             {
-                nowHp = Mathf.Min(nowHp + Hp_regenAmount, maxHp);
+            // 매우 좋은 수정입니다!
+            ModifyHp(Hp_regenAmount);
             }
         }
-    }
+}
     public void RegenUpdate()
     {
         //스탯 가져와서 현재 체력 재생량 계산 후 업데이트하는 함수 
@@ -101,7 +102,7 @@ public class HpMpSystem : MonoBehaviour
         HpUpdate();
     }
 
-     IEnumerator Mp_RegenRoutine()
+    IEnumerator Mp_RegenRoutine()
     {
         while (true)
         {
@@ -112,5 +113,29 @@ public class HpMpSystem : MonoBehaviour
                 nowMp = Mathf.Min(nowMp + Mp_regenAmount, maxMp);
             }
         }
+    }
+    
+
+
+        /// <summary>
+    /// 체력을 변경합니다. 양수(+)는 회복, 음수(-)는 피해입니다.
+    /// 변경된 체력의 실제 변화량을 반환합니다.
+    /// </summary>
+    /// <param name="amount">변경할 체력량</param>
+    /// <returns>실제로 적용된 체력 변화량</html/returns>
+    public float ModifyHp(float amount)
+    {
+        // 1. 변경 전 현재 체력을 기록
+        float beforeHp = nowHp;
+
+        // 2. 체력 변경 (amount가 음수면 피해, 양수면 회복)
+        float newHp = nowHp + amount;
+
+        // 3. Clamp 함수로 newHp가 0과 maxHp 사이를 벗어나지 않도록 보정
+        nowHp = Mathf.Clamp(newHp, 0, maxHp);
+
+        // 4. 실제 체력 변화량을 계산하여 반환 (UI에 피해량/회복량 띄우기 등에 유용)
+        float actualChange = nowHp - beforeHp;
+        return actualChange;
     }
 }
