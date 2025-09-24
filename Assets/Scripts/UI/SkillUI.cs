@@ -4,7 +4,8 @@ public class SkillUI : MonoBehaviour
 {
     public SkillIcon skillIconPrefab; // 스킬 아이콘 프리팹
     public Transform layout;          // 스킬 아이콘 부모 오브젝트
-    
+    public SkillInfo skillInfoObject; 
+
 
     public void Init_SkillIcon()
     {
@@ -21,7 +22,16 @@ public class SkillUI : MonoBehaviour
         {
             SkillIcon icon = Instantiate(skillIconPrefab, layout);
             icon.Init_SkillIcon(i);
-            
+            icon.skillIcon_InfoButton.enabled = true; // 스크립트(컴포넌트)를 활성화
+        }
+    }
+    
+     public void OpenSkillInfo()
+    {
+        if (skillInfoObject != null)
+        {
+            skillInfoObject.gameObject.SetActive(true);
+
         }
     }
 }
