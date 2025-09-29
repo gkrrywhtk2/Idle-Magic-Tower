@@ -51,7 +51,7 @@ public class TowerData : MonoBehaviour
         }
         foreach (var s in skill_State)
         {
-            Debug.Log($"ID:{s.id}, Owned:{s.owned}, Count:{s.count}, Level:{s.level}, Name:{s.def?.name_Kor}");
+            Debug.Log($"ID:{s.id}, Owned:{s.owned}, Count:{s.count}, Level:{s.level}, Name:{s.def?.skillName.Kor}");
         }
 
         SlotCopy();

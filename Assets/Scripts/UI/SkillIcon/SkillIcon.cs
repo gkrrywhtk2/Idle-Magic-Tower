@@ -45,7 +45,7 @@ public class SkillIcon : MonoBehaviour
         }
 
         var def = skillDefs[id];
-        textName.text = def.name_Kor;
+        textName.text = def.skillName.Kor;
         skillImage.sprite = def.icon;
 
         int rankIndex = (int)def.rank;
